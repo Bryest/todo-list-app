@@ -17,7 +17,7 @@ $ npx create-react-app my-todo-list-app
 $ npm i node-sass
 ```
 
-3.
+3. To run the project
 
 ```shell
 $ npm start
