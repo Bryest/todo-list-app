@@ -1,17 +1,17 @@
-Tutorial Link
-https://mauriciogc.medium.com/react-creando-una-app-to-do-list-con-create-react-app-y-el-hook-usestate-6ae378569705
+Tutorial [Link](https://mauriciogc.medium.com/react-creando-una-app-to-do-list-con-create-react-app-y-el-hook-usestate-6ae378569705)
 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-1.
+1. Create react project
 
 ```shell
 $ npx create-react-app my-todo-list-app
 ```
 
-2.
+2. It allows to natively compile .scss files to css at incredible speed and automatically via a connect middleware
+   [node-sass](https://www.npmjs.com/package/node-sass])
 
 ```shell
 $ npm i node-sass
@@ -30,13 +30,37 @@ import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
-  return <div className="App">Hola que fue</div>;
+  return <div className="App">Hello world</div>;
 }
 
 export default App;
 ```
 
-5.
+5. Edit App.css to App.scss
+
+6. App.scss
+
+```scss
+html {
+  background: #ddd;
+  height: 100%;
+  display: flex;
+}
+body {
+  width: 100%;
+  margin: auto;
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+```
+
+7. Our files are
+   src/
+   ├── app.js
+   ├── App.scss
+   └── ...
 
 ## Available Scripts
 
