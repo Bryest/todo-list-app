@@ -56,7 +56,7 @@ body {
 }
 ```
 
-7. Our files are
+Our files are
 
    .
    ├── ...
