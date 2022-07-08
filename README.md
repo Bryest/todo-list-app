@@ -58,6 +58,7 @@ body {
 
 7. Our files are
 
+```
 📦src
 ┣ 📜App.js
 ┣ 📜App.scss
@@ -67,6 +68,7 @@ body {
 ┣ 📜logo.svg
 ┣ 📜reportWebVitals.js
 ┗ 📜setupTests.js
+```
 
 ## Available Scripts
 
