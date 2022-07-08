@@ -1,6 +1,42 @@
+Tutorial Link
+https://mauriciogc.medium.com/react-creando-una-app-to-do-list-con-create-react-app-y-el-hook-usestate-6ae378569705
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+1.
+
+```shell
+$ npx create-react-app my-todo-list-app
+```
+
+2.
+
+```shell
+$ npm i node-sass
+```
+
+3.
+
+```shell
+$ npm start
+```
+
+4. App.js
+
+```js
+import logo from "./logo.svg";
+import "./App.css";
+
+function App() {
+  return <div className="App">Hola que fue</div>;
+}
+
+export default App;
+```
+
+5.
 
 ## Available Scripts
 
