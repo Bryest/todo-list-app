@@ -57,10 +57,16 @@ body {
 ```
 
 7. Our files are
-   src/
-   ├── app.js
-   ├── App.scss
-   └── ...
+
+📦src
+┣ 📜App.js
+┣ 📜App.scss
+┣ 📜App.test.js
+┣ 📜index.css
+┣ 📜index.js
+┣ 📜logo.svg
+┣ 📜reportWebVitals.js
+┗ 📜setupTests.js
 
 ## Available Scripts
 
