@@ -58,13 +58,13 @@ body {
 
 7. Our files are
 
-.
-├── ...
-├── src
-│   ├── app.js
-│   ├── index.js
-│   ├── ...
-└── ...
+   .
+   ├── ...
+   ├── src
+   │   ├── app.js
+   │   ├── index.js
+   │   ├── ...
+   └── ...
    
 
 ## Available Scripts
