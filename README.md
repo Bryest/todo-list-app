@@ -57,7 +57,7 @@ body {
 ```
 
 7. Our files are
-   src/
+   src
    ├── app.js
    ├── App.scss
    └── ...
