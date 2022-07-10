@@ -1,10 +1,12 @@
-import logo from './logo.svg';
+import Container from './components/Container';
 import './App.scss';
 
-function App() {
+import React from 'react'
+
+const App = () => {
   return (
-    <div className="App">Hello world</div>
+    <div className="App"><Container/></div>
   );
 }
 
-export default App;
+export default App
