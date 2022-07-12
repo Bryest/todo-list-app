@@ -278,4 +278,62 @@ const FormTodo = (props) => {
 export default FormTodo;
 ```
 
+19. In list we save all our added data.
+With `handleAddItem` attribute and method we update the state `list`.
+
+```js
+import React, { useState } from "react";
+import FormTodo from "./FormTodo";
+import TaskList from "./TaskList";
+const Container = () => {
+  const [list, setList] = useState([]);   //Added
+  //-----------Added-----------
+  const handleAddItem = (addItem) => {    
+    setList([...list, addItem]);    //Added
+  };
+  //---------------------------
+  return (
+    <div>
+      Container
+      <FormTodo handleAddItem={handleAddItem} />  {/*Added attribute and method*/}
+      <TaskList />
+    </div>
+  );
+};
+
+export default Container;
+```
+
+20. And add `list` and `setList` attributes and states to `TaskList`.
+
+```js
+    ...
+     <TaskList list={list} setList={setList} />
+    ...
+```
+
+21. This is the complete code in `Container.jsx`
+
+```js
+import React, { useState } from "react";
+import FormTodo from "./FormTodo";
+import TaskList from "./TaskList";
+const Container = () => {
+  const [list, setList] = useState([]);
+
+  const handleAddItem = (addItem) => {
+    setList([...list, addItem]);
+  };
+  return (
+    <div>
+      Container
+      <FormTodo handleAddItem={handleAddItem} />
+      <TaskList list={list} setList={setList} />
+    </div>
+  );
+};
+
+export default Container;
+```
+
 <!-- prettier-ignore-end -->
