@@ -1,10 +1,18 @@
 import React, { useState } from "react";
 
 const FormTodo = (props) => {
+  const { handleAddItem } = props;
   const [description, setDescription] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(description);
+
+    handleAddItem({
+      done: false,
+      id: (+new Date()).toString(),
+      description,
+    });
+
     setDescription("");
   };
   return (

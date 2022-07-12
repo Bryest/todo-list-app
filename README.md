@@ -171,8 +171,11 @@ export default TaskList;
  `description` and `setDescription` are our variables that its are going to help us in the next code.
  The `preventDefault` is to avoid refresh page after push the button to add an element.
  The `console.log(description)` is to see what we add in the form with the web console. 
-
  The directive `button` will be active if the value (`description`) of the input is not empty (`""`).
+ We declarate our event handler `handleSubmit` for the form. We assign this variable for the `onSubmit` event. This event is a Js event that occurs when a form is `"submitted"`.
+ When we push `enter` or we click the `button`, it execute `handleSubmit`, and we add `e.preventDefault()` to avoid refresh the page.
+ And we clear `description` with `setDescription("")`. 
+
 ```js
  import React, { useState } from "react";
 
@@ -181,6 +184,73 @@ const FormTodo = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(description);
+    setDescription("");
+  };
+  return (
+    <form onSubmit={handleSubmit}>
+      <div className="todo-list">
+        <div className="file-input">
+          <input
+            type="text"
+            className="text"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+          />
+          <button
+            className="button pink"
+            disabled={description ? "" : "disabled"}
+          >
+            Add
+          </button>
+        </div>
+      </div>
+    </form>
+  );
+};
+
+export default FormTodo;
+```
+
+17. We add this lines of code to capture `props`.
+And to make a method to generate the `Date` and handle if we add an item or not with the `done` boolean.
+
+```js
+const FormTodo = (props) => {
+  const { handleAddItem } = props;    //Added
+  const [description, setDescription] = useState("");
+  const handleSubmit = (e) => {   
+    e.preventDefault();
+    console.log(description);
+    //-----------Added-----------
+    handleAddItem({
+      done: false,
+      id: (+new Date()).toString(),
+      description,
+    });
+    //---------------------------
+    setDescription("");
+  };
+  return (
+```
+
+18. This is the current code in FormTodo.jsx
+
+```js
+import React, { useState } from "react";
+
+const FormTodo = (props) => {
+  const { handleAddItem } = props;
+  const [description, setDescription] = useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(description);
+
+    handleAddItem({
+      done: false,
+      id: (+new Date()).toString(),
+      description,
+    });
+
     setDescription("");
   };
   return (
